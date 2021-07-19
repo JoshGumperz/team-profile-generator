@@ -1,6 +1,12 @@
 const inquirer = require('inquirer')
 const fs = require("fs")
 const generateMarkdown = require("./utils/generateHtml")
+const Employee = function(name, position, id, email)  {
+    this.name = name
+    this.position = position
+    this.id = id
+    this.email = email
+}
 
 const questions1 = [
     {
@@ -73,6 +79,10 @@ function displayPromt(position) {
         employee1 = new Employee(data.name, position, data.id, data.email) 
         console.log(data.officeNum)
         console.log(employee1)
+        // const readMePageContent = generateMarkdown(data)
+        // fs.writeFile("./Generated-READMEs/README.md", readMePageContent, (err) =>
+        // err ? console.log(err) : console.log("successfully created readme!")
+        // )
     })
 }
 
