@@ -66,7 +66,10 @@ function displayPromt(position) {
         questions1.push(questions2[0])
         inquirer.prompt(questions1)
         .then ((data) => {
-            new Manager(data.name, position, data.id, data.email, data.officeNum) 
+            const employee1 = new Manager(data.name, position, data.id, data.email, data.officeNum) 
+            const readMePageContent = generateHtml(employee1)
+            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
+            err ? console.log(err) : console.log("successfully created Web Page!"))
         })
     }
     else if(position === "Software Engineer") {
