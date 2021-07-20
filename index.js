@@ -1,7 +1,9 @@
 const inquirer = require('inquirer')
 const fs = require("fs")
-const generateMarkdown = require("./utils/generateHtml")
-const Employee = require("./utils/employee")
+const generateHtml = require("./utils/generateHtml")
+const Manager = require('./utils/Manager')
+const SoftwareEngineer = require('./utils/SoftwareEngineer')
+const Intern = require('./utils/Intern')
 
 const questions1 = [
     {
@@ -28,12 +30,12 @@ const questions2 = [
     },
     {
         type: "input",
-        message: "Enter team Github:",
+        message: "Enter team member Github:",
         name: "github",
     },
     {
         type: "input",
-        message: "Enter team school:",
+        message: "Enter team member school:",
         name: "school",
     }
 ]
@@ -62,23 +64,27 @@ init();
 function displayPromt(position) {
     if(position === "Manager") {
         questions1.push(questions2[0])
+        inquirer.prompt(questions1)
+        .then ((data) => {
+            new Manager(data.name, position, data.id, data.email, data.officeNum) 
+        })
     }
     else if(position === "Software Engineer") {
         questions1.push(questions2[1])
+        inquirer.prompt(questions1)
+        .then ((data) => {
+            employee1 = new SoftwareEngineer(data.name, position, data.id, data.email, data.github) 
+            console.log(employee1)
+        })
     }
     else {
         questions1.push(questions2[2])
+        inquirer.prompt(questions1)
+        .then ((data) => {
+            employee1 = new Intern(data.name, position, data.id, data.email, data.school) 
+            console.log(employee1)
+        })
     }
-    inquirer.prompt(questions1)
-    .then ((data) => {
-        employee1 = new Employee(data.name, position, data.id, data.email, data.officeNum) 
-        console.log(employee1)
-        console.log(data.officeNum)
-        // const readMePageContent = generateMarkdown(data)
-        // fs.writeFile("./Generated-READMEs/README.md", readMePageContent, (err) =>
-        // err ? console.log(err) : console.log("successfully created readme!")
-        // )
-    })
 }
 
 function displayInitialPrompt() {
