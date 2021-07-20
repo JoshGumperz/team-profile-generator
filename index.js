@@ -1,9 +1,10 @@
 const inquirer = require('inquirer')
 const fs = require("fs")
-const generateHtml = require("./utils/generateHtml")
+const generateHtml = require("./generateHtml/generateMain")
 const Manager = require('./utils/Manager')
 const SoftwareEngineer = require('./utils/SoftwareEngineer')
 const Intern = require('./utils/Intern')
+const employees = []
 
 const questions1 = [
     {
@@ -55,7 +56,11 @@ function init() {
             displayInitialPrompt()
         }
         else {
-            return
+            if(employees.length > 0) {
+                renderHtml()
+            } else {
+                return
+            }
         }
     })
 }
@@ -66,26 +71,27 @@ function displayPromt(position) {
         questions1.push(questions2[0])
         inquirer.prompt(questions1)
         .then ((data) => {
-            const employee1 = new Manager(data.name, position, data.id, data.email, data.officeNum) 
-            const readMePageContent = generateHtml(employee1)
-            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
-            err ? console.log(err) : console.log("successfully created Web Page!"))
+            employees.push(new Manager(data.name, position, data.id, data.email, data.officeNum)) 
+            questions1.splice(3, 1)
+            init()
         })
     }
     else if(position === "Software Engineer") {
         questions1.push(questions2[1])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employee1 = new SoftwareEngineer(data.name, position, data.id, data.email, data.github) 
-            console.log(employee1)
+            employees.push(new SoftwareEngineer(data.name, position, data.id, data.email, data.github)) 
+            questions1.splice(3, 1)
+            init()
         })
     }
     else {
         questions1.push(questions2[2])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employee1 = new Intern(data.name, position, data.id, data.email, data.school) 
-            console.log(employee1)
+            employees.push(new Intern(data.name, position, data.id, data.email, data.school)) 
+            questions1.splice(3, 1)
+            init()
         })
     }
 }
@@ -103,4 +109,28 @@ function displayInitialPrompt() {
     .then((data) => {
         displayPromt(data.position)
     })
+}
+
+function renderHtml() {
+    for (var i = 0; i < employees.length; i++){
+        if (employees[i].position === "Manager") {
+            const employee1 = new Manager(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].officeNum) 
+            const readMePageContent = generateHtml(employee1)
+            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
+            err ? console.log(err) : console.log("successfully created Web Page!"))
+        }
+        else if (employees[i].position === "Software Engineer") {
+            const employee1 = new SoftwareEngineer(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].github) 
+            const readMePageContent = generateHtml(employee1)
+            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
+            err ? console.log(err) : console.log("successfully created Web Page!"))
+        }
+        else {
+            const employee1 = new Intern(employees[i].name, employees[i].position, employees[i].id, employees[i].email,
+            employees[i].school) 
+            const readMePageContent = generateHtml(employee1)
+            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
+            err ? console.log(err) : console.log("successfully created Web Page!"))
+        }
+    }
 }

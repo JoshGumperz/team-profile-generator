@@ -14,17 +14,9 @@ const generateHtml = (data) =>
     <h1 class="display-3">My Team</h1>
   </header>
   <main class="main-content d-flex">
-    <div class="employee-container d-flex">
-      <div class="employee">
-        <div class="employee-header"><h3>${data.name}, ${data.position}</h3></div>
-        <div class="employee-text">
-          <p>ID: ${data.id}</p>
-          <p>Email: ${data.email}</p>
-          <p>Office number: ${data.officeNum}</pd>
-        </div>
-      </div>
-   </div>
+
   </main>
+  <script src="../assets/managerHtml.js"></script>
 </body>
 </html>
 `;
