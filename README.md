@@ -16,22 +16,26 @@ Team Profile Generator Tutorial Video: https://drive.google.com/file/d/1mRlg4QoV
 
 If you need a little additional instruction, don't worry. Here's how it works:
 The first thing you'll wanna do after opening up your terminal is run the command "node index.js"
-![Screenshot](https://i.imgur.com/6IQJ8Ml.png)
+![Screenshot](https://i.imgur.com/KSWSBqB.png)
 
 After entering the "node index.js" command, the generator will initialize and you will be prompted as follows:
-![Screenshot](https://i.imgur.com/r9pfRNx.png)
+![Screenshot](https://i.imgur.com/3IHlhq6.png)
 If you want to add a new team member, navigate to the "yes" option using the arrow keys and hit enter
 
 After selecting to enter a new employee, you will once again be prompted as follows:
-![Screenshot](https://i.imgur.com/r9pfRNx.png)
-![Screenshot](https://i.imgur.com/4xXL0cR.png)
-![Screenshot](https://i.imgur.com/agKBwgF.png)
-![Screenshot](https://i.imgur.com/s2ubk7z.png)
-![Screenshot](https://i.imgur.com/IYODtbh.png)
+![Screenshot](https://i.imgur.com/9sETT1h.png)
+![Screenshot](https://i.imgur.com/VbkiCMa.png)
+![Screenshot](https://i.imgur.com/N0rsyAL.png)
+![Screenshot](https://i.imgur.com/Fn5q4Df.png)
+![Screenshot](https://i.imgur.com/EpB0X56.png)
 Just input your answer to each prompt question and your input will be recorded and used to generate the employee boxes in the final generated web page.
 
+After answering all of the questions, you will be prompted if you want to add an additional team member. 
+![Screenshot](https://i.imgur.com/RZU2L6Z.png)
+If not you can select no and generate your final web page. Or you can select yes, and the process will start over again
+
 If all goes well after following all the steps accordingly you will see this success screen
-![Screenshot](https://i.imgur.com/auMWaHj.png)
+![Screenshot](https://i.imgur.com/tSvQxY4.png)
 Your README file with then be generated and placed in the Generated-READMEs folder with all of the information you input.
 
 ## Built With
@@ -53,4 +57,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* I'd like to acknowledge my classmates, Johnny Ngyuen (https://github.com/Pcon27), and Eddy Yeung (https://github.com/Pcon27) for helping me through some of the trickiest roadblocks I encountered in the process of completing this assignment.  
+* I'd like to acknowledge my classmates, Johnny Ngyuen (https://github.com/Pcon27), and Eddy Yeung (https://github.com/eycs0317) for helping me through some of the trickiest roadblocks I encountered in the process of completing this assignment.  
