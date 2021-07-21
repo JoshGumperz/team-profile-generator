@@ -12,7 +12,7 @@ In order to get started using the Team Profile Generator, you'll need to have No
 Once you've installed the necessary prerequisites, you can start using the generator. And in order to show you how to use the generator, I've included an instructional video that takes you through the steps of generating your own custom team profile web page. The video will be linked below, along with a step by step explanation. 
 
 
-Team Profile Generator Tutorial Video: https://drive.google.com/file/d/1mRlg4QoVilNs8terglqgVAiRN8ruL6Py/view?usp=sharing
+Team Profile Generator Tutorial Video: https://drive.google.com/file/d/1N0-Wer65_iidH2hGee75_D01UhPN5Ftz/view?usp=sharing
 
 If you need a little additional instruction, don't worry. Here's how it works:
 The first thing you'll wanna do after opening up your terminal is run the command "node index.js"
@@ -36,7 +36,7 @@ If not you can select no and generate your final web page. Or you can select yes
 
 If all goes well after following all the steps accordingly you will see this success screen
 ![Screenshot](https://i.imgur.com/tSvQxY4.png)
-Your README file with then be generated and placed in the Generated-READMEs folder with all of the information you input.
+Your final web page will then be generated and placed in the Generated-Web-Page folder with all of the information you input.
 
 ## Built With
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
