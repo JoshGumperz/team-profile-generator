@@ -23,7 +23,7 @@ describe("Intern", () => {
         const newEmployee = new Intern("Josh", 1, "name@example.com");
         expect(newEmployee.email).toEqual("name@example.com")
     })
-    it("should create Intern class with github", () => {
+    it("should create Intern class with school", () => {
         const newEmployee = new Intern("Josh", 1, "name@example.com", "hogwarts");
         expect(newEmployee.school).toEqual("hogwarts")
     })
