@@ -5,7 +5,7 @@ For this assignment, We were tasked with creating a program that generates a web
 
 ### Prerequisites
 
-In order to get started using the Team Profile Generator, you'll need to have Node installed, and you'll need to run the "npm i" command to install inquirer and fs.
+In order to get started using the Team Profile Generator, you'll need to have Node installed, and you'll need to run the "npm i" command to install inquirer, jest, and fs.
 
 ## Getting Started
 
