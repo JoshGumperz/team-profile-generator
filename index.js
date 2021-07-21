@@ -75,7 +75,7 @@ function displayPromt(position) {
         questions1.push(questions2[0])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employees.push(new Manager(data.name, position, data.id, data.email, data.officeNum)) 
+            employees.push(new Manager(ddata.name, data.id, data.email, data.officeNum, position)) 
             questions1.splice(3, 1)
             init()
         })
@@ -84,7 +84,7 @@ function displayPromt(position) {
         questions1.push(questions2[1])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employees.push(new SoftwareEngineer(data.name, position, data.id, data.email, data.github)) 
+            employees.push(new SoftwareEngineer(data.name, data.id, data.email, data.github, position)) 
             questions1.splice(3, 1)
             init()
         })
@@ -93,7 +93,7 @@ function displayPromt(position) {
         questions1.push(questions2[2])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employees.push(new Intern(data.name, position, data.id, data.email, data.school)) 
+            employees.push(new Intern(data.name, data.id, data.email, data.school, position)) 
             questions1.splice(3, 1)
             init()
         })
@@ -118,18 +118,17 @@ function displayInitialPrompt() {
 function renderHtml() {
     for (var i = 0; i < employees.length; i++){
         if (employees[i].position === "Manager") {
-            const employee1 = new Manager(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].officeNum) 
+            const employee1 = new Manager(employees[i].name, employees[i].id, employees[i].email, employees[i].officeNum, employees[i].position) 
             const pageContent = managerHtml(employee1)
             employeeArrayTemplate.push(pageContent)
         }
         else if (employees[i].position === "Software Engineer") {
-            const employee1 = new SoftwareEngineer(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].github) 
+            const employee1 = new SoftwareEngineer(employees[i].name, employees[i].id, employees[i].email, employees[i].github, employees[i].position) 
             const pageContent = engineerHtml(employee1)
             employeeArrayTemplate.push(pageContent)
         }
         else {
-            const employee1 = new Intern(employees[i].name, employees[i].position, employees[i].id, employees[i].email,
-            employees[i].school) 
+            const employee1 = new Intern(employees[i].name, employees[i].id, employees[i].email, employees[i].school, employees[i].position) 
             const pageContent = internHtml(employee1)
             employeeArrayTemplate.push(pageContent)
         }
