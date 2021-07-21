@@ -8,7 +8,7 @@ class SoftwareEngineer extends Employee {
     getRole(){
         return this.position
     }
-    getSchool() {
+    getGithub() {
         return this.github
     }
 }
