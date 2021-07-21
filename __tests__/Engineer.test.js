@@ -43,7 +43,7 @@ describe("SoftwareEngineer", () => {
         const newEmployee = new SoftwareEngineer("Josh", 1, "name@example.com", "github", "Software Engineer")
         expect(newEmployee.getGithub()).toEqual("github")
     })
-    it("should get name from getRole() function", () => {
+    it("should get role from getRole() function", () => {
         const newEmployee = new SoftwareEngineer("Josh", 1, "name@example.com", "github", "Software Engineer")
         expect(newEmployee.getRole()).toEqual("Software Engineer")
     })
