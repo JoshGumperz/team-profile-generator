@@ -1,9 +1,13 @@
 const inquirer = require('inquirer')
 const fs = require("fs")
 const generateHtml = require("./generateHtml/generateMain")
+const managerHtml = require("./generateHtml/managerHtml")
+const engineerHtml = require("./generateHtml/engineerHtml")
+const internHtml = require("./generateHtml/internHtml")
 const Manager = require('./utils/Manager')
 const SoftwareEngineer = require('./utils/SoftwareEngineer')
 const Intern = require('./utils/Intern')
+const employeeArrayTemplate = []
 const employees = []
 
 const questions1 = [
@@ -115,22 +119,24 @@ function renderHtml() {
     for (var i = 0; i < employees.length; i++){
         if (employees[i].position === "Manager") {
             const employee1 = new Manager(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].officeNum) 
-            const readMePageContent = generateHtml(employee1)
-            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
-            err ? console.log(err) : console.log("successfully created Web Page!"))
+            const pageContent = managerHtml(employee1)
+            employeeArrayTemplate.push(pageContent)
         }
         else if (employees[i].position === "Software Engineer") {
             const employee1 = new SoftwareEngineer(employees[i].name, employees[i].position, employees[i].id, employees[i].email, employees[i].github) 
-            const readMePageContent = generateHtml(employee1)
-            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
-            err ? console.log(err) : console.log("successfully created Web Page!"))
+            const pageContent = engineerHtml(employee1)
+            employeeArrayTemplate.push(pageContent)
         }
         else {
             const employee1 = new Intern(employees[i].name, employees[i].position, employees[i].id, employees[i].email,
             employees[i].school) 
-            const readMePageContent = generateHtml(employee1)
-            fs.writeFile("./Generated-Web-Page/team-profile.html", readMePageContent, (err) =>
-            err ? console.log(err) : console.log("successfully created Web Page!"))
+            const pageContent = internHtml(employee1)
+            employeeArrayTemplate.push(pageContent)
         }
     }
+    const finalTemplate = employeeArrayTemplate.join("")
+    const placeHolder = generateHtml(finalTemplate)
+    fs.writeFile("./Generated-Web-Page/team-profile.html", placeHolder, (err) =>
+            err ? console.log(err) : console.log("successfully created Web Page!"))
 }
+

@@ -41,3 +41,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.employee-text p, .employee-text a {
+    text-decoration: none;
+}
+
+.label-text {
+    color: black;
+}

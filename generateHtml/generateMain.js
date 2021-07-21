@@ -14,11 +14,10 @@ const generateHtml = (data) =>
     <h1 class="display-3">My Team</h1>
   </header>
   <main class="main-content d-flex">
-
+  ${data}
   </main>
   <script src="../assets/managerHtml.js"></script>
 </body>
-</html>
-`;
+</html>`
 
 module.exports = generateHtml;

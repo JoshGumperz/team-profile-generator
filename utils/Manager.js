@@ -5,6 +5,7 @@ class Manager extends Employee {
         super(name, position, id, email)
         this.officeNum = officeNum
     }
+
 }
 
 module.exports = Manager
