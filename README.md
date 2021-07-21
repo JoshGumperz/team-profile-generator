@@ -57,4 +57,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* I'd like to acknowledge my classmates, Johnny Ngyuen (https://github.com/Pcon27), and Eddy Yeung (https://github.com/eycs0317) for helping me through some of the trickiest roadblocks I encountered in the process of completing this assignment.  
+* I'd like to acknowledge my classmates, Johnny Ngyuen (https://github.com/NguyenJohnnyT), and Eddy Yeung (https://github.com/eycs0317) for helping me through some of the trickiest roadblocks I encountered in the process of completing this assignment.  
