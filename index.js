@@ -118,18 +118,15 @@ function displayInitialPrompt() {
 function renderHtml() {
     for (var i = 0; i < employees.length; i++){
         if (employees[i].position === "Manager") {
-            const employee1 = new Manager(employees[i].name, employees[i].id, employees[i].email, employees[i].officeNum, employees[i].position) 
-            const pageContent = managerHtml(employee1)
+            const pageContent = managerHtml(employees[i])
             employeeArrayTemplate.push(pageContent)
         }
         else if (employees[i].position === "Software Engineer") {
-            const employee1 = new SoftwareEngineer(employees[i].name, employees[i].id, employees[i].email, employees[i].github, employees[i].position) 
-            const pageContent = engineerHtml(employee1)
+            const pageContent = engineerHtml(employees[i])
             employeeArrayTemplate.push(pageContent)
         }
         else {
-            const employee1 = new Intern(employees[i].name, employees[i].id, employees[i].email, employees[i].school, employees[i].position) 
-            const pageContent = internHtml(employee1)
+            const pageContent = internHtml(employees[i])
             employeeArrayTemplate.push(pageContent)
         }
     }
