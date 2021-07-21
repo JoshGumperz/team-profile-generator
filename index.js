@@ -134,8 +134,8 @@ function renderHtml() {
         }
     }
     const finalTemplate = employeeArrayTemplate.join("")
-    const placeHolder = generateHtml(finalTemplate)
-    fs.writeFile("./Generated-Web-Page/team-profile.html", placeHolder, (err) =>
+    const renderPage = generateHtml(finalTemplate)
+    fs.writeFile("./Generated-Web-Page/team-profile.html", renderPage, (err) =>
             err ? console.log(err) : console.log("successfully created Web Page!"))
 }
 
