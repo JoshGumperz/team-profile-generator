@@ -1,4 +1,4 @@
-const Employee = require('../utils/Employee')
+const Employee = require("../utils/Employee")
 
 
 describe('Employee', () => {

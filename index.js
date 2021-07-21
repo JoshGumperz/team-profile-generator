@@ -75,7 +75,7 @@ function displayPromt(position) {
         questions1.push(questions2[0])
         inquirer.prompt(questions1)
         .then ((data) => {
-            employees.push(new Manager(ddata.name, data.id, data.email, data.officeNum, position)) 
+            employees.push(new Manager(data.name, data.id, data.email, data.officeNum, position)) 
             questions1.splice(3, 1)
             init()
         })
