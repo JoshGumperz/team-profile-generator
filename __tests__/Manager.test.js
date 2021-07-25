@@ -25,7 +25,7 @@ describe("Manager", () => {
     })
     it("should create Manager class with offic number", () => {
         const newEmployee = new Manager("Josh", 1, "name@example.com", 2);
-        expect(newEmployee.officeNum).toEqual("2")
+        expect(newEmployee.officeNum).toEqual(2)
     })
     it("should get name from getName function", () => {
         const newEmployee = new Manager("Josh", 1, "name@example.com", 2, "Manager");
@@ -41,7 +41,7 @@ describe("Manager", () => {
     })
     it("should get office number from getOfficeNum() function", () => {
         const newEmployee = new Manager("Josh", 1, "name@example.com", 2, "Manager")
-        expect(newEmployee.getOfficeNum()).toEqual("2")
+        expect(newEmployee.getOfficeNum()).toEqual(2)
     })
     it("should get role from getRole() function", () => {
         const newEmployee = new Manager("Josh", 1, "name@example.com", 2, "Manager")
