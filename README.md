@@ -9,7 +9,7 @@ In order to get started using the Team Profile Generator, you'll need to have No
 
 ## Getting Started
 
-Once you've installed the necessary prerequisites, you can start using the generator. And one major focal point of this project is to display my ability to work using test driven development techniques. So along with the code that makes the program itself work, I also created a series of tests to test everything out and make sure it's all working as inteded. You can run the test files using the command:
+Once you've installed the necessary prerequisites, you can start interacting with the program. One major focal point of this project is to display my ability to work using test driven development techniques. So along with the code that makes the program itself work, I also created a series of tests to test everything out and make sure it's all working as inteded. You can run the test files using the command:
 ```
 npm test
 ```
