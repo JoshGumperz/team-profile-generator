@@ -16,7 +16,7 @@ npm test
 After running the npm test command, you should see a screen that looks like this:
 ![Screenshot](https://i.imgur.com/ANR9hHI.png)
 
-Now that you've run the tests and you've confirmed that everything is working as inteded, you're ready to start using the profile generator. And in order to show you how to use it, I've included an instructional video that takes you through the steps of generating your own custom team profile web page. The video will be linked below, along with a step by step explanation. 
+Now that you've finished running the tests and you've confirmed that everything is working as inteded, you're ready to start using the profile generator. And in order to show you how to use it, I've included an instructional video that takes you through the steps of generating your own custom team profile web page. The video will be linked below, along with a step by step explanation. 
 
 Team Profile Generator Tutorial Video: https://drive.google.com/file/d/1N0-Wer65_iidH2hGee75_D01UhPN5Ftz/view?usp=sharing
 
