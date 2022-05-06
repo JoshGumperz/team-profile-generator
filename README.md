@@ -41,11 +41,11 @@ After answering all of the questions, you will be prompted if you want to add an
 If not you can select no and generate your final web page. Or you can select yes, and the process will start over again
 
 If all goes well after following all the steps accordingly you will see this success screen
-![Screenshot](https://i.imgur.com/tSvQxY4.png)
+![Screenshot](https://i.imgur.com/kph6RZA.png)
 
 
 Your final web page will then be generated and placed in the Generated-Web-Page folder with all of the information you input.
-![Screenshot](https://i.imgur.com/kph6RZA.png)
+![Screenshot](https://i.imgur.com/tSvQxY4.png)
 
 ## Built With
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
