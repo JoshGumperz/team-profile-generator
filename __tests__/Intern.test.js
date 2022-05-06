@@ -39,11 +39,11 @@ describe("Intern", () => {
         const newEmployee = new Intern("Josh", 1, "name@example.com", "hogwarts", "Intern");
         expect(newEmployee.getEmail()).toEqual("name@example.com")
     })
-    it("should get school from getSchool() function", () => {
+    it("should get school from getSchool function", () => {
         const newEmployee = new Intern("Josh", 1, "name@example.com", "hogwarts", "Intern")
         expect(newEmployee.getSchool()).toEqual("hogwarts")
     })
-    it("should get role from getRole() function", () => {
+    it("should get role from getRole function", () => {
         const newEmployee = new Intern("Josh", 1, "name@example.com", "hogwarts", "Intern")
         expect(newEmployee.getRole()).toEqual("Intern")
     })

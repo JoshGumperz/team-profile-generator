@@ -30,7 +30,7 @@ describe('Employee', () => {
     const newEmployee = new Employee("Josh", 1, "name@example.com");
     expect(newEmployee.getEmail()).toEqual("name@example.com")
   })
-  it("should get name from getRole() function", () => {
+  it("should get name from getRole function", () => {
     const newEmployee = new Employee("Josh", 1, "name@example.com")
     expect(newEmployee.getRole()).toEqual("Employee")
   })
